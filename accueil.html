@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Guest House T.T.S</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f7f7f7;
+color:#222;
+transition:.4s;
+}
+
+body.dark{
+background:#111;
+color:#eee;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:75px;
+background:rgba(90,0,0,.92);
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 20px;
+z-index:1000;
+box-shadow:0 3px 15px rgba(0,0,0,.3);
+}
+
+.logo{
+color:#fff;
+font-size:22px;
+font-weight:bold;
+}
+
+.logo span{
+color:gold;
+}
+
+.menu-toggle{
+display:none;
+font-size:28px;
+color:white;
+cursor:pointer;
+}
+
+nav{
+display:flex;
+gap:18px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+color:gold;
+}
+
+.mode-btn{
+background:gold;
+border:none;
+padding:10px;
+border-radius:50%;
+cursor:pointer;
+font-size:18px;
+}
+
+.hero{
+margin-top:75px;
+position:relative;
+height:250px;
+overflow:hidden;
+}
+
+.hero video{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.overlay{
+
+position:absolute;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.45);
+
+display:flex;
+flex-direction:column;
+
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+color:white;
+
+padding:20px;
+}
+
+.overlay h1{
+font-size:50px;
+margin-bottom:15px;
+}
+
+.overlay p{
+font-size:22px;
+max-width:700px;
+}
+
+.btn{
+
+display:inline-block;
+
+margin-top:25px;
+
+padding:15px 35px;
+
+background:gold;
+
+color:#222;
+
+text-decoration:none;
+
+font-weight:bold;
+
+border-radius:40px;
+
+transition:.3s;
+}
+
+.btn:hover{
+
+background:white;
+
+transform:scale(1.05);
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+nav{
+
+position:absolute;
+
+top:75px;
+
+left:-100%;
+
+width:100%;
+
+background:#5b0000;
+
+flex-direction:column;
+
+padding:20px;
+
+transition:.4s;
+}
+
+nav.active{
+left:0;
+}
+
+.overlay h1{
+font-size:32px;
+}
+
+.overlay p{
+font-size:17px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Guest House
+<span>T.T.S</span>
+</div>
+
+<div class="menu-toggle" onclick="menu()">
+<i class="fa-solid fa-bars"></i>
+</div>
+
+<nav id="menu">
+
+<a href="#guest">Guest House</a>
+
+<a href="#terrasse">Terrasse</a>
+
+<a href="#galerie">Galerie</a>
+
+<a href="#reservation">Réservation</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+<button class="mode-btn" onclick="darkMode()">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+</header>
+
+<section class="hero">
+
+<video autoplay muted loop playsinline>
+
+<source src="Guest.mp4" type="video/mp4">
+
+</video>
+
+<div class="overlay">
+
+<h1>Guest House T.T.S</h1>
+
+<p>
+
+Confort • Élégance • Hospitalité
+
+</p>
+
+<a href="#reservation" class="btn">
+
+Réserver maintenant
+
+</a>
+
+</div>
+
+</section>
+<!-- ========================= -->
+<!-- GUEST HOUSE -->
+<!-- ========================= -->
+
+<section id="guest" class="section">
+
+<div class="title">
+<h2>🏨 Notre Guest House</h2>
+<p>Profitez d'un séjour paisible dans un cadre moderne, sécurisé et chaleureux.</p>
+</div>
+
+<div class="card">
+<img src="1.png" alt="Chambre VIP">
+<h3>Chambre tout confort</h3>
+<p>✔ Lit confortable</p>
+<p>✔ Douche privée</p>
+<p>✔  Eau chaude</p>
+<p>✔ Cadre calme et sécurisé</p>
+<h4>22 $/Nuit et 12$/repos</h4>
+<a href="#reservation" class="btn">Réserver</a>
+</div>
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- TERRASSE -->
+<!-- ========================= -->
+
+<section id="terrasse" class="section">
+
+<div class="title">
+<h2>🍽️ Notre Terrasse</h2>
+<p>Un espace convivial pour vos repas, boissons et événements.</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<img src="res.jpeg" alt="">
+<h3>Restaurant</h3>
+<p>Déjeuner et dîner dans un cadre agréable.</p>
+</div>
+
+<div class="card">
+<img src="bie.png" alt="">
+<h3>Boissons</h3>
+<p>Bières, vins et boissons fraîches.</p>
+</div>
+
+<div class="card">
+<img src="ev.png" alt="">
+<h3>Événements</h3>
+<p>Anniversaires, réunions, soirées privées.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- NOS SERVICES -->
+<!-- ========================= -->
+
+<section class="section">
+
+<div class="title">
+<h2>⭐ Nos Services</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<i class="fa-solid fa-wifi fa-3x"></i>
+<h3>Wi-Fi Gratuit</h3>
+<p>Connexion Internet rapide.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-car fa-3x"></i>
+<h3>Parking</h3>
+<p>Parking sécurisé.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-shield-halved fa-3x"></i>
+<h3>Sécurité</h3>
+<p>Surveillance 24h/24.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-bell-concierge fa-3x"></i>
+<h3>Service</h3>
+<p>Accueil professionnel.</p>
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+.section{
+padding:10px 8%;
+}
+
+.title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.title h2{
+font-size:20px;
+color:#8B0000;
+margin-bottom:10px;
+}
+
+.dark .title h2{
+color:gold;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+transition:.4s;
+text-align:center;
+padding-bottom:20px;
+}
+
+.dark .card{
+background:#1f1f1f;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:230px;
+object-fit:cover;
+}
+
+.card h3{
+margin:18px 0 10px;
+}
+
+.card h4{
+margin:15px 0;
+color:#8B0000;
+font-size:22px;
+}
+
+.dark .card h4{
+color:gold;
+}
+
+.card i{
+margin-top:30px;
+color:#8B0000;
+}
+
+.dark .card i{
+color:gold;
+}
+
+.card p{
+padding:0 15px;
+line-height:1.7;
+}
+
+</style>
+<!-- ========================= -->
+<!-- GALERIE -->
+<!-- ========================= -->
+
+<section id="galerie" class="section">
+
+<div class="title">
+<h2>📷 Galerie</h2>
+<p>Découvrez quelques images de notre établissement.</p>
+</div>
+
+<div class="gallery">
+
+<img src="5.png">
+<img src="2.png">
+<img src="3.png">
+<img src="4.png">
+<img src="6.png">
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- AVIS CLIENTS -->
+<!-- ========================= -->
+
+<section class="section">
+
+<div class="title">
+<h2>⭐ Avis de nos Clients</h2>
+</div>
+
+<div class="testimonial">
+
+<p id="avisTexte">
+"Excellent accueil, chambres très propres et personnel professionnel."
+</p>
+
+<h3 id="avisNom">
+— Ir Irénée.
+</h3>
+
+</div>
+
+</section>
+
+<!-- RÉSERVATION -->
+<!--================== -->
+
+<section id="reservation" class="section">
+
+<div class="title">
+<h2>🛏️ Réservation</h2>
+<p>Veuillez remplir le formulaire ci-dessous. Nous vous contacterons pour confirmer votre réservation.</p>
+</div>
+
+<form class="reservation" onsubmit="envoyerWhatsApp(); return false;">
+
+<label>Nom complet</label>
+<input type="text" id="nom" placeholder="Ex. Jean Kasongo" required>
+
+<label>Numéro de téléphone</label>
+<input type="tel" id="telephone" placeholder="+243 XXX XXX XXX" required>
+
+<label>Province de provenance ou ville </label>
+<input type="text" id="province" placeholder="Ex. Lualaba/fungurume" required>
+
+<label>Êtes-vous accompagné(e) ?</label>
+<select id="accompagne" required>
+<option value="">Sélectionnez une option</option>
+<option>Oui</option>
+<option>Non</option>
+</select>
+
+<label>Numéro de la carte d'électeur</label>
+<input type="tel" id="carte" placeholder="Numéro de la carte d'électeur" required>
+
+<label>Date d'arrivée</label>
+<input type="date" id="date" required>
+
+<label>Heure d'arrivée prévue</label>
+<input type="time" id="heure" required>
+
+<label>Durée du séjour</label>
+<select id="duree" required>
+<option value="">Choisissez la durée</option>
+<option>Repos (2h30)</option>
+<option>Nuitée</option>
+<option>Plusieurs nuits</option>
+</select>
+
+<label>Message ou demande particulière</label>
+<textarea id="message" placeholder="Ex.Bonjour, je souhaite commander un plat de frites et bénéficier d'eau chaude dans ma chambre."></textarea>
+
+<button type="submit" class="btn">
+📩 Envoyer la réservation
+</button>
+
+</form>
+
+</section>
+
+<script>
+
+function envoyerWhatsApp(){
+
+let nom=document.getElementById("nom").value;
+let telephone=document.getElementById("telephone").value;
+let province=document.getElementById("province").value;
+let accompagne=document.getElementById("accompagne").value;
+let carte=document.getElementById("carte").value;
+let date=document.getElementById("date").value;
+let heure=document.getElementById("heure").value;
+let duree=document.getElementById("duree").value;
+let message=document.getElementById("message").value;
+
+let texte =
+`🏨 *NOUVELLE DEMANDE DE RÉSERVATION*
+
+👤 Nom : ${nom}
+📞 Téléphone : ${telephone}
+📍 Province : ${province}
+👥 Accompagné(e) : ${accompagne}
+🪪 Carte d'électeur : ${carte}
+📅 Date d'arrivée : ${date}
+🕒 Heure d'arrivée : ${heure}
+⏳ Durée du séjour : ${duree}
+
+💬 Message :
+${message}
+
+Merci de confirmer cette réservation.`;
+
+let url = "https://wa.me/+243976786849?text=" + encodeURIComponent(texte);
+
+window.location.href = url;
+}
+
+</script>
+<!-- ========================= -->
+<!-- CONTACT -->
+<!-- ========================= -->
+
+<section id="contact" class="section">
+
+<div class="title">
+<h2>📞 Contact</h2>
+</div>
+<p style="text-align:center;">
+📍 Fungurume, RDC
+</p>
+
+<p style="text-align:center;">
+📞 +243 97 678 6849
+</p>
+
+<p style="text-align:center;">
+✉ contact@ttsguesthouse.com
+</p>
+
+</section>
+<!-- BOUTON APPEL -->
+<a href="tel:+243976786849" class="appel">
+    <i class="fa-solid fa-phone"></i>
+</a>
+<!-- BOUTON WHATSAPP -->
+
+<a
+href="https://wa.me/243976786849"
+class="whatsapp"
+target="_blank">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+<!-- RETOUR EN HAUT -->
+
+<button
+id="topBtn"
+onclick="topFunction()">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<footer>
+
+© 2026 T.T.S Guest House
+
+</footer>
+
+<style>
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:20px;
+
+}
+
+.gallery img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:12px;
+
+transition:.4s;
+
+cursor:pointer;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.05);
+
+}
+
+.testimonial{
+
+max-width:700px;
+
+margin:auto;
+
+text-align:center;
+
+background:white;
+
+padding:40px;
+
+border-radius:15px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.dark .testimonial{
+
+background:#222;
+
+}
+
+.reservation{
+
+display:grid;
+
+gap:20px;
+
+max-width:600px;
+
+margin:auto;
+
+}
+
+.reservation input,
+
+.reservation select,
+
+.reservation textarea{
+
+padding:15px;
+
+border:1px solid #ccc;
+
+border-radius:10px;
+
+font-size:16px;
+
+}
+
+.reservation textarea{
+
+height:140px;
+
+resize:none;
+
+}
+.appel{
+
+position:fixed;
+
+right:20px;
+
+bottom:160px;
+
+width:60px;
+
+height:60px;
+
+background:#007BFF;
+
+color:white;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:28px;
+
+text-decoration:none;
+
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+
+z-index:999;
+
+transition:.3s;
+
+}
+
+.appel:hover{
+
+transform:scale(1.1);
+
+background:#0056b3;
+
+}
+
+.whatsapp{
+
+position:fixed;
+
+right:20px;
+
+bottom:90px;
+
+width:60px;
+
+height:60px;
+
+background:#25D366;
+
+color:white;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:30px;
+
+text-decoration:none;
+
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+
+z-index:999;
+
+}
+
+#topBtn{
+
+position:fixed;
+
+bottom:20px;
+
+right:20px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:#8B0000;
+
+color:white;
+
+font-size:22px;
+
+cursor:pointer;
+
+display:none;
+
+z-index:999;
+
+}
+
+footer{
+
+background:#111;
+
+color:white;
+
+text-align:center;
+
+padding:25px;
+
+margin-top:50px;
+
+}
+
+</style>
+
+<script>
+
+/* MENU */
+
+function menu(){
+
+document
+.getElementById("menu")
+.classList.toggle("active");
+
+}
+
+/* MODE SOMBRE */
+
+function darkMode(){
+
+document.body.classList.toggle("dark");
+
+}
+
+/* AVIS */
+
+const avis=[
+
+{
+t:"Excellent accueil, chambres très propres et confortables.",
+n:"— Victoire H.Bella."
+},
+
+{
+t:"La terrasse est magnifique, le service est impeccable.",
+n:"— Jures K."
+},
+
+{
+t:"Je recommande vivement TTS Guest House.",
+n:"— Ir Irénée K."
+},
+
+{
+t:"Personnel accueillant et cadre très agréable.",
+n:"— Marie L."
+}
+
+];
+
+let i=0;
+
+setInterval(function(){
+
+i=(i+1)%avis.length;
+
+document.getElementById("avisTexte").innerHTML=avis[i].t;
+
+document.getElementById("avisNom").innerHTML=avis[i].n;
+
+},5000);
+
+/* RETOUR EN HAUT */
+
+window.onscroll=function(){
+
+if(document.documentElement.scrollTop>300){
+
+document.getElementById("topBtn").style.display="block";
+
+}else{
+
+document.getElementById("topBtn").style.display="none";
+
+}
+
+}
+
+function topFunction(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+}
+
+</script>
+
+</body>
+
+</html>
